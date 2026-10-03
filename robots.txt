@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theway.example/sitemap.xml
