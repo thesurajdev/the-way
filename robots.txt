@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://theway.example/sitemap.xml
+Sitemap: https://theway.surajdev.com/sitemap.xml

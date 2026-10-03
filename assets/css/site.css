@@ -48,7 +48,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -154,24 +154,26 @@ html:not([data-theme="dark"]) .icon-moon { display: none; }
 .hero-kicker { font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 1.4rem; }
 .hero h1 {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(3.4rem, 12vw, 7.5rem); line-height: .95; letter-spacing: .12em;
+  font-size: clamp(3.6rem, 13vw, 8rem); line-height: .95; letter-spacing: .12em;
   margin: 0; text-indent: .12em;
 }
 .hero-tagline {
   font-family: var(--serif); font-style: italic; font-weight: 400;
-  font-size: clamp(1.35rem, 3.4vw, 2rem); color: var(--ink-2);
-  margin: 1.4rem 0 0;
+  font-size: clamp(1.5rem, 3.8vw, 2.3rem); color: var(--ink-2);
+  margin: 1.5rem 0 0;
 }
-.hero-support { color: var(--ink-2); font-size: 1.0625rem; max-width: 34rem; margin: 1.6rem auto 0; }
-.hero-cta { justify-content: center; margin-top: 2.2rem; }
-.hero-note { margin-top: 1.6rem; font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 1.05rem; }
+.hero-support { color: var(--ink-2); font-size: 1.1875rem; line-height: 1.65; max-width: 36rem; margin: 1.8rem auto 0; }
+.hero-cta { justify-content: center; margin-top: 2.5rem; }
+.hero-note { margin-top: 1.8rem; font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 1.15rem; }
 .path-art { position: absolute; inset: auto 0 0; width: 100%; height: auto; pointer-events: none; color: var(--line-2); opacity: .8; }
 .path-art path { stroke-dasharray: 1400; stroke-dashoffset: 1400; animation: draw 3.2s ease-out .3s forwards; }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 
 /* ---------------------------------------------------------------- bands & sections */
-.band { padding: clamp(3.5rem, 8vw, 5.5rem) 0; }
+.band { padding: clamp(4.5rem, 9vw, 7rem) 0; }
 .band-alt { background: var(--paper-2); }
+.band-invite { background: var(--paper-2); }
+.band-invite .verse { margin-top: 3rem; }
 .band-dark { background: #1d1c17; color: #efe9dd; }
 [data-theme="dark"] .band-dark { background: #100f0c; }
 .band-dark h2, .band-dark h3 { color: #fbf7ee; }
@@ -181,23 +183,35 @@ html:not([data-theme="dark"]) .icon-moon { display: none; }
 .section-head.center { margin-inline: auto; text-align: center; }
 h2, .h2 {
   font-family: var(--serif); font-weight: 500; letter-spacing: -.01em;
-  font-size: clamp(1.75rem, 3.6vw, 2.5rem); line-height: 1.15; margin: 0 0 1rem; color: var(--ink);
+  font-size: clamp(1.95rem, 4vw, 2.75rem); line-height: 1.15; margin: 0 0 1.1rem; color: var(--ink);
 }
 .band-dark h2 { color: #fbf7ee; }
 h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height: 1.25; margin: 0 0 .6rem; }
-.lead { font-size: 1.125rem; color: var(--ink-2); }
+.lead { font-size: 1.2rem; line-height: 1.65; color: var(--ink-2); }
 .eyebrow { font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin: 0 0 .8rem; }
 
 /* verse stacks (homepage short lines) */
-.verse { text-align: center; max-width: 30rem; margin: 2rem auto 0; }
-.verse p { margin: .45rem 0; color: var(--ink-2); }
-.verse p.strong { font-family: var(--serif); font-size: 1.35rem; color: var(--ink); margin-top: 1.4rem; font-weight: 500; }
+.verse { text-align: center; max-width: 34rem; margin: 2.4rem auto 0; }
+.verse p { margin: .6rem 0; color: var(--ink-2); font-size: 1.15rem; line-height: 1.7; }
+.verse p.strong { font-family: var(--serif); font-size: 1.6rem; color: var(--ink); margin-top: 1.8rem; font-weight: 500; }
+
+/* the invitation (top of homepage) */
+.invite-lines { text-align: center; max-width: 44rem; margin: 2.6rem auto 0; }
+.invite-lines > p {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(1.7rem, 4.2vw, 2.6rem); line-height: 1.38; color: var(--ink);
+  margin: .62em 0;
+}
+.invite-lines > p.invite-def {
+  font-style: italic; font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  color: var(--ink-2); margin-top: 1.6rem;
+}
 
 /* chips (Nothing to Prove) */
 .chip-list { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; max-width: 46rem; margin: 1.8rem auto 0; padding: 0; list-style: none; }
 .chip-list li {
-  border: 1px solid var(--line-2); border-radius: 999px; padding: .45rem .95rem;
-  font-size: .9375rem; color: var(--ink-2); background: var(--paper);
+  border: 1px solid var(--line-2); border-radius: 999px; padding: .55rem 1.1rem;
+  font-size: 1rem; color: var(--ink-2); background: var(--paper);
 }
 .list-inline { padding-left: 1.2rem; color: var(--ink-2); }
 .list-inline li { margin: .3rem 0; }
@@ -208,14 +222,14 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height
 @media (max-width: 34rem) { .card-grid { grid-template-columns: 1fr; } }
 .card {
   background: var(--paper); border: 1px solid var(--line); border-radius: 16px;
-  padding: 1.6rem 1.5rem; box-shadow: var(--shadow);
+  padding: 1.9rem 1.7rem; box-shadow: var(--shadow);
   transition: transform .18s ease, border-color .18s ease;
 }
 .card:hover { transform: translateY(-3px); border-color: var(--line-2); }
 .card .label { margin: 0 0 .7rem; }
-.card-phrase { font-family: var(--serif); font-size: 1.55rem; font-weight: 500; margin: 0 0 .7rem; color: var(--forest); }
+.card-phrase { font-family: var(--serif); font-size: 1.75rem; font-weight: 500; margin: 0 0 .8rem; color: var(--forest); }
 [data-theme="dark"] .card-phrase { color: var(--forest); }
-.card p:last-child { margin: 0; font-size: .9375rem; color: var(--ink-2); }
+.card p:last-child { margin: 0; font-size: 1rem; line-height: 1.65; color: var(--ink-2); }
 
 .label {
   font-family: var(--sans); font-size: .75rem; font-weight: 600;
@@ -226,6 +240,16 @@ h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height
 .image-band { position: relative; }
 .image-band img { width: 100%; max-height: 30rem; object-fit: cover; object-position: center 60%; }
 .image-band figcaption { font-size: .8125rem; color: var(--ink-3); text-align: center; padding: .7rem 1rem 0; }
+
+/* full-bleed fixed (parallax) image — stays put while it passes the viewport */
+.image-fixed {
+  height: clamp(28rem, 92vh, 58rem);
+  background: url("../img/banner.png") center 45% / cover no-repeat;
+  background-attachment: fixed;
+}
+@media (pointer: coarse), (hover: none) {
+  .image-fixed { background-attachment: scroll; background-position: center; }
+}
 
 /* split (nature / evolution etc.) */
 .split { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
